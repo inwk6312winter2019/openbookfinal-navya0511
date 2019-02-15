@@ -12,3 +12,16 @@ def unique_words(file):
   print(result)
 
 unique_words(file1)
+
+def count_the_article(file):
+  count=0
+  result=[]
+  for line in file:
+    line=line.strip()
+    line=line.split()
+    for word in line:
+      if word not in result:
+         result.append(word)
+  print(len(result))
+
+count_the_article(file1)
