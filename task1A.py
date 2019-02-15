@@ -11,7 +11,7 @@ def unique_words(file):
         result.append(word)
   print(result)
 
-unique_words(file1)
+unique_words(file1) 
 
 def count_the_article(file):
   count=0
@@ -25,7 +25,6 @@ def count_the_article(file):
   print(len(result))
 
 count_the_article(file1)
-
 
 def sorted_words(file):
     result=[]
@@ -54,3 +53,21 @@ def character_word_count(file):
     print(hist)
 
 character_word_count(file1)
+
+def starts_with_vow(file):
+    count=0
+    result=[]
+    for line in file:
+        line=line.lower()
+        line=line.strip()
+        line=line.split()
+        for word in line:
+            if word not in result:
+                result.append(word)
+    for item in result:
+        if item[0] in ("a", "e", "i", "o", "u"):
+            count+=1
+    print(count)
+
+starts_with_vow(file1)
+
