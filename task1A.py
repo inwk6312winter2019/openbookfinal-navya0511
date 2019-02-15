@@ -25,3 +25,17 @@ def count_the_article(file):
   print(len(result))
 
 count_the_article(file1)
+
+
+def sorted_words(file):
+    result=[]
+    for line in file:
+        line=line.strip()
+        line=line.split()
+        for word in line:
+            if word not in result:
+                result.append(word)
+    result.sort(key = len,reverse = True)
+    print(result)
+
+sorted_words(file1)
